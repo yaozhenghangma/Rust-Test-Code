@@ -35,8 +35,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls target
+          echo new-line
           ls target/release
-          ls target/debug
+          echo new-line
+          ls target/release/deps
+          echo new-line
           ls
           
       - name: Upload artifacts
