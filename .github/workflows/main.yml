@@ -34,16 +34,10 @@ jobs:
           
       - name: Run a multi-line script
         run: |
-          ls target
-          echo new-line
-          ls target/release
-          echo new-line
-          ls target/release/deps
-          echo new-line
-          ls
+          zip -r target.zip target
           
       - name: Upload artifacts
         uses: 'actions/upload-artifact@v2'
         with:
-          path: target/debug/test_rust
+          path: target.zip
           
