@@ -29,8 +29,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           sudo apt install openmpi-bin openmpi-doc libopenmpi-dev
-          rustup target add x86_64-unknown-linux-musl
-          cargo build --release --target x86_64-unknown-linux-musl
+          cargo build --release
+          # rustup target add x86_64-unknown-linux-musl
+          # cargo build --release --target x86_64-unknown-linux-musl
           
       - name: Run a multi-line script
         run: |
